@@ -1,0 +1,196 @@
+*{  margin: 0;
+    padding: 0%;
+    color: #444;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-sizing: border-box;
+}
+
+.container-fluid{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    width: 100vh;
+    align-items: center;
+  
+}
+.container-fluid img {
+    
+   width: 70%;
+   margin-bottom: 30px;
+ 
+}
+
+.container-fluid h2{
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    text-transform: capitalize;
+    color:rgb(112, 112, 112);
+}
+
+.login{
+    text-align: center;
+    position :relative;
+    width: 400px;
+    text-transform: uppercase;
+}
+
+input, button{
+    width: 100%;
+    border: 0;
+    border-radius: 20px;
+}
+
+input{
+    border-bottom:2px solid #444;
+    padding: 12px 40px 12px 20px;
+
+}
+
+input, button, .group, p, i ,a{
+    font-size: 12px;
+    font-weight: 400;
+
+}
+
+.group{
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.group i{
+    position:absolute;
+    top:15px;
+    right: 20px;
+}
+
+button{
+    padding: 12px;
+    border-radius: 20px;
+    color: #fff;
+    margin-bottom: 30px;
+    background-color: rgb(46, 105, 66);
+    cursor:pointer;
+    border-radius: 2px;
+}
+
+form p{
+    margin-top: 20px;
+}
+
+  button > i{
+    color: #ffff;
+}
+
+button i {
+    margin-right: 10px;
+}
+form  a{
+    color: rgb(24, 126, 58);
+}
+
+input:focus, input:focus::placeholder, input:focus+i{
+    color: rgb(24, 126, 58);
+}
+
+input:focus, button:focus{
+    outline: 0;
+}
+
+.container-fluid:after, .container-fluid:before{
+    content: "";
+    position: absolute;
+    height: 300px;
+    width: 300px;
+
+}
+
+.container-fluid:before{
+    background-image:linear-gradient(to right,rgb(24, 126, 58), rgb(15, 136, 41) ) ;
+    bottom: 0;
+    left: 0;
+    clip-path: polygon(0 0  ,0  100%, 100% 100%);
+
+}
+
+.container-fluid:after{
+    background-image:linear-gradient(to right,rgb(24, 126, 58), rgb(15, 136, 41) ) ;
+    top: 0;
+    right: 0;
+    clip-path: polygon(100% 0 , 0 0, 100% 100%);
+
+}
+
+@media(max-width:1200px){
+    .container-fluid form{
+       width: 90%;
+       margin: auto;
+       
+    }
+
+    .container-fluid:after, .container-fluid:before{
+    content: "";
+    position: absolute;
+    height: 200px;
+    width: 200px;
+
+}
+
+ .container-fluid form .group input{
+        height: 40px;
+        font-size: 12px;
+    }
+}
+@media(max-width:600px){
+    .container-fluid:before, .container-fluid:after{
+        height: 100px;
+        width: 100px;
+    }
+    .container-fluid form{
+       width: 60%;
+       margin: auto;
+       
+    }
+
+    .container-fluid form .group input{
+        height: 30px;
+        font-size: 10px;
+    }
+
+     .container-fluid form .group i{
+      
+        font-size: 10px;
+    }
+    input{
+    border-bottom:1px solid #444;
+    padding: 12px 40px 12px 20px;
+
+}
+.container-fluid img {
+    
+   width: 50%;
+   margin-bottom: 30px;
+ 
+}
+
+form p{
+    margin-top: 20px;
+    font-size: 8px;
+    color:#444 ;
+}
+form p a{
+    margin-top: 20px;
+    font-size: 8px;
+    
+}
+
+.container-fluid h2{
+    font-size: 15px;
+    margin-bottom: 10px;
+    font-weight: 400;
+    text-transform: capitalize;
+     color:#444 ;
+}
+
+}
+

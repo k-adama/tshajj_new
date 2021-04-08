@@ -1,0 +1,180 @@
+
+.main-content .logo{
+    text-align: center;
+
+}
+
+.main-content .logo h6{
+    text-align: center;
+    display: block;
+    border: 1px solid black;
+    
+}
+
+.main-content .logo img{
+    height: 50px;
+    width: 250px;
+}
+
+.main-content .register .form1 {
+    width: 95%;
+    padding: 20px;
+    margin: auto;
+    border:1px solid lightgray;
+   
+}
+
+
+
+.main-content .register #page1 button{
+    padding: 10px 60px;
+    background-color:rgb(24, 126, 58); 
+    color: #ffff;
+    border: none;
+    font-size: 18px;
+    font-family:Calibri ;
+    border-radius: 5px;
+    outline: none;
+    width: 20%;
+   display: block;
+   margin: auto;
+   margin-top: 15px;
+    
+}
+
+.main-content .register form  h6{
+    color:rgb(24, 126, 58); 
+    text-transform: uppercase;
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.main-content .register .form2 , .form3, .form4{
+    width: 95%;
+    margin: auto;
+    border:1px solid lightgray;
+
+}
+
+.main-content .register .form2{
+    padding: 20px;
+}
+
+.main-content .register .form2 input{
+    padding: 20px;
+    margin-top: 15px;
+}
+
+.main-content .register .form3{
+    padding: 20px;
+    margin: auto;
+ 
+}
+
+.main-content .register .form3 input{
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 15px;
+    padding: 20px;
+}
+
+.main-content .register .form4{
+    padding: 20px;
+  
+}
+
+.main-content .register .form4 div input{
+    padding: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 20px;
+    margin: auto;
+  
+}
+
+.main-content .register #page4 > .terminer{
+    display: inline-block;
+    width: 20%;
+    padding: 15px 60px;
+    margin-left: 100px;
+    margin-top: 20px;
+    border:none;
+    font-weight: 600;
+    outline: none;
+    color: #ffff;
+    border-radius: 5px;
+    background-color: rgb(224, 99, 49);
+    transition:background-color 1s ;
+}
+
+.main-content .register #page4 > .terminer:hover{
+    background-color: rgb(194, 60, 7);
+}
+
+
+.main-content .register input{
+    margin-bottom: 10px;
+  
+}
+
+.main-content .register .page{
+    display: none;
+}
+
+.main-content .register .header{
+    display: flex;
+    width: 50%;
+    margin:40px auto;
+    justify-content: space-between;
+}
+
+.main-content .register .header > .page-num{
+    border: 1px solid rgb(24, 126, 58);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    padding: 2px;
+    text-align: center;
+   
+}
+
+.main-content .register .header > .active{
+    color: white;
+    background-color: rgb(24, 126, 58);
+}
+
+.main-content .register .prev{
+    display: inline-block;
+    width: 20%;
+    padding: 15px 60px;
+    margin-left: 400px;
+    margin-top: 20px;
+    border:none;
+    font-weight: 600;
+    outline: none;
+    color: #ffff;
+    border-radius: 5px;
+    transition:background-color 1s ;
+    background-color: #6d6e6e;
+}
+
+.main-content .register .prev:hover{
+    background-color: #5a5a5a; 
+}
+
+.main-content .register .next{
+    display: inline-block;
+    width: 20%;
+    padding: 15px 60px;
+    margin-left: 100px;
+    margin-top: 20px;
+    border:none;
+    font-weight: 600;
+    outline: none;
+    color: #ffff;
+    border-radius: 5px;
+    background-color: rgb(24, 126, 58);
+    transition:background-color 1s ;
+}
+
+.main-content .register .next:hover{
+    background-color: rgb(16, 75, 35);
+}
