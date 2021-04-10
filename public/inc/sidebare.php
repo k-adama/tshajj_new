@@ -38,14 +38,14 @@
     <div class="sidebar-header">
         <h3 class='brand'>
            
-            <div class="ti-unlink">
+            <div class="">
             <img src="../../image/Background_1_-removebg-preview.png" alt="">
                 <!-- <span style="font-size:18px;">TASNIM VOYAGES</span> -->
             </div>
            
             
         </h3>
-        <label for="sidebar-toggle"  class="ti-menu-alt"></label>
+        <label for="sidebar-toggle"  class=""></label>
     </div>
 
     <div class="sidebar-menu">
@@ -54,7 +54,7 @@
             <li>
                 <a href="liste_pelerin.php"> 
                     <span class='ti-agenda'></span> 
-                    <span>Liste des pelerins</span>
+                    <span>Liste des pèlerins</span>
                  </a>
                   
             </li>
@@ -63,7 +63,7 @@
             <li>
                 <a href="inscription.php"> 
                     <span class='ti-plus'></span> 
-                    <span>Ajouter un pelerins</span> 
+                    <span>Ajouter un pèlerin</span> 
                 </a>
             </li>
             

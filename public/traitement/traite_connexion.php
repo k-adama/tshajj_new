@@ -23,7 +23,7 @@ if (isset($_POST['submit'])) {
             if( $_SESSION['user_type']== 'agent comptoir'){
 
               header('location:public/pages/liste_pelerin.php');
-            } elseif($_SESSION['user_type']== 'admin' or 'Admin'){
+            } elseif($_SESSION['user_type']== 'admin' or 'Admin' or 'administrateur' or 'Administrateur'){
               header('location:admin/public/pages/utilisateur.php');
             }
             

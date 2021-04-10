@@ -48,10 +48,13 @@ class PDF extends FPDF {
         $this->SetDrawColor(24, 126, 58);
         $this->SetFillColor(24, 126, 58);
         $this->SetTextColor(255, 255, 255);
-        $this->Cell(100, 5, '@TasnimVayage', 0, 0, 'C', 1);
+        $this->Cell(100, 5, '@TasnimVoyage', 0, 0, 'C', 1);
     }
  
-    function ConstPDF($nom, $prenom, $ville, $contact,$date_naissance,$qrcode) {
+    function ConstPDF($nom, $prenom, $ville, $contact,$date_naissance,$qrcode,$grp_sangin,$photo) {
+        $this->Image($photo);
+        $this->SetXY(30,13);
+        $this->SetFont('Times', 'B', 14);
         $this->Image("image/".$qrcode."", 5, 20, 20, 20);
         $this->SetXY(30,22);
         $this->SetFont('Times', 'B', 14);
@@ -63,8 +66,9 @@ class PDF extends FPDF {
         $this->Cell(60, 5, 'Contact: '.$contact);
         $this->SetXY(30,44);
         $this->Cell(60, 5, 'Domicile: '.$ville);
-        
-        //$this->Cell(65, 20, '', 0, 0, 'C', 0, $this->Image('images/aiesec_logo.png', 65, 20));
+        $this->SetXY(30,53);
+        $this->Cell(60, 5, 'Groupe sanguin: '.$grp_sangin);
+         //$this->Cell(65, 20, '', 0, 0, 'C', 0, $this->Image('images/aiesec_logo.png', 65, 20));
     }
 }
    
@@ -78,16 +82,17 @@ $pdf->AddPage(); // on y ajoute une première page
 
 $pdf->SetFont('Arial','',14); // Type de police
 $pdf->SetAutoPageBreak(false,0); // Creation d'une nouvelle page auto à false
-  
+$photo="../photoPelerin/".$pelerin['photo_pel'];
 $qrcode=$pelerin['identifiant'];
 $nom = $pelerin['nom_pel'];
 $prenom= $pelerin['prenom_pel'];
 $ville = $pelerin['ville_pel'];
 $date_naissance=$pelerin['dat_nais_pel'];
 $contact = $pelerin['cont_pel'];
+$grp_sangin = $pelerin['gp_sang_pel'];
      
 // Appel a la fonction ConstPDF
-$pdf->ConstPDF($nom, $prenom,  $ville,$contact,$date_naissance,$qrcode,);
+$pdf->ConstPDF($nom, $prenom,  $ville,$contact,$date_naissance,$qrcode,$grp_sangin,$photo);
  
 // Sortie du FPDF
 $pdf->Output();

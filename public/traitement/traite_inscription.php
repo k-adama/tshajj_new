@@ -285,9 +285,8 @@ empty($origine_err)){
     $file = $path.uniqid().".png";
 
     //text to output
-    $text=$nom;
-    $text.=$contact;
-    $text.=$date_naissance;
+    $text=$passport;
+    
     QRcode::png($text,$file,'L',4,2);
     //$photo_contrat = $_FILES['contrat']['name'];
 
@@ -302,24 +301,18 @@ $date_register = date('d-m-y h:i:s');
 //  $vaccination = $_FILES['vaccination']['name'];
 //  $carnet = $_FILES['carnet']['name'];
 //  $contrat = $_FILES['contrat']['name'];
- //$nb = count($_FILES);
+$photo = $_FILES['photo'];
+ $nb = count($_FILES);
 
-// for($i=0; $i<$nb;$i++){
+ for($i=0; $i<$nb;$i++){
 
-//   if( move_uploaded_file($_FILES["photo"]["tmp_name"], "../../photoPelerin/" . $_FILES["photo"]["name"][$i])
-//   && move_uploaded_file($_FILES["image"]["tmp_name"], "../../photoPelerin/" . $_FILES["image"]["name"][$i])
-//   && move_uploaded_file($_FILES["paiement"]["tmp_name"], "../../photoPelerin/" . $_FILES["paiement"]["name"][$i])
-//   && move_uploaded_file($_FILES["recu"]["tmp_name"], "../../photoPelerin/" . $_FILES["recu"]["name"][$i])
-//   && move_uploaded_file($_FILES["passeport"]["tmp_name"], "../../photoPelerin/" . $_FILES["passeport"]["name"][$i])
-//   && move_uploaded_file($_FILES["carnet"]["tmp_name"], "../../photoPelerin/" . $_FILES["carnet"]["name"][$i])
-//   && move_uploaded_file($_FILES["CNI"]["tmp_name"], "../../photoPelerin/" . $_FILES["CNI"]["name"][$i])
-//   && move_uploaded_file($_FILES["vaccination"]["tmp_name"], "../../photoPelerin/" . $_FILES["vaccination"]["name"][$i])
-//   && move_uploaded_file($_FILES["contrat"]["tmp_name"], "../../photoPelerin/" . $_FILES["contrat"]["name"][$i])){
-     //file_exists("../../photoPelerin/" . $_FILES["photo"]["name"])
+   if( move_uploaded_file($_FILES["photo"]["tmp_name"], "../../photoPelerin/" . $_FILES["photo"]["name"][$i])){
+      
+     file_exists("../../photoPelerin/" . $_FILES["photo"]["name"]);
  //&& file_exists("../../photoPelerin/" . $_FILES["image"]["name"])){
-     //echo $_FILES["photo"]["name"] . " existe déjà.";
+     echo $_FILES["photo"]["name"] . " existe déjà.";
      //echo $_FILES["image"]["name"] . " existe déjà.";//else{
-    // move_uploaded_file($_FILES["photo"]["tmp_name"], "../../photoPelerin/" . $_FILES["photo"]["name"]);
+     move_uploaded_file($_FILES["photo"]["tmp_name"], "../../photoPelerin/" . $_FILES["photo"]["name"]);
      //move_uploaded_file($_FILES["image"]["tmp_name"], "../../photoPelerin/" . $_FILES["image"]["name"]);
 
     //  $dossier = '../../photoPelerin/';
@@ -338,10 +331,10 @@ $date_register = date('d-m-y h:i:s');
      $nb = count($_FILES);
      //for($i=0; $i<$nb;$i++)
       
-        $photo = $_FILES['photo']['name'];
-    $image = $_FILES['image']['name'][$i];
-  if (move_uploaded_file($_FILES["photo"]["tmp_name"], "../../photoPelerin/" . $_FILES["photo"]["name"]) 
-      && move_uploaded_file($_FILES["image"]["tmp_name"][$i], "../../photoPelerin/" . $_FILES["image"]["name"])){
+//         $photo = $_FILES['photo']['name'];
+//     $image = $_FILES['image']['name'][$i];
+//   if (move_uploaded_file($_FILES["photo"]["tmp_name"], "../../photoPelerin/" . $_FILES["photo"]["name"]) 
+//       && move_uploaded_file($_FILES["image"]["tmp_name"][$i], "../../photoPelerin/" . $_FILES["image"]["name"])){
        
 
 $req=$db->prepare("INSERT INTO tshajj_pelerin(identifiant,nom_pel,prenom_pel,dat_nais_pel,passport_pel,proff_pel,niv_etu_pel,
@@ -357,7 +350,7 @@ $centre_delivr,$medecin,$grp_sangin,$mal_signale,$autre_info,$alergie,$plat,$nbr
 header('location:home.php');
 }
 }
- 
+}
 }
 ?>
 

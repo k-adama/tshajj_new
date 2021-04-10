@@ -8,6 +8,8 @@
     session_destroy();
  
     // Redirection vers la page de connexion
-    header("location: ../../index.php");
+  
+    header("location:../../index.php");
+   
     exit;
 ?>

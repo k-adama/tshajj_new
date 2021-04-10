@@ -3,6 +3,7 @@
      
  ?>
 <?php include('public/traitement/traite_connexion.php'); ?>
+
 <div class='container-fluid'>
     <div class="login">
         <img src="image/Background_1_-removebg-preview.png" alt="logo">

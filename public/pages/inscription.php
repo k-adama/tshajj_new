@@ -1,5 +1,9 @@
+<link href="path/to/select2.min.css" rel="stylesheet" />
+<script src="path/to/select2.min.js"></script>
+
 <?php
 session_start();
+
 if (isset($_SESSION['id'])) {
     include('../traitement/traite_inscription.php')
 ?>
@@ -148,18 +152,17 @@ if (isset($_SESSION['id'])) {
                         <input type="text" placeholder="Alergie" class="form-control" name="alergie">
                         <input type="text" placeholder="Plats preferer" class="form-control" name="plat">
                         <input type="number" placeholder="nombre de plats par jour" class="form-control" name="nbr_plat">
-                            
-                            <label for="select">Tolérance à la climatisation</label>
+
+                        <!-- <label for="select">Tolérance à la climatisation</label>
                         <select name="clim" id="select" class="select">
 
                             <option value="Pas du tout">Pas du tout</option>
                             <option value="Moins bien">Moins bien</option>
                             <option value="Bien">Bien</option>
                             
-                        </select>
+                        </select> -->
+                       
 
-                            
-                        
                         <!-- <input type="select" name="clim" class="form-control">
                    <label for="select">Tolérance à la climatisation</label>
                     <option value="Pas du tout">Pas du tout</option>
@@ -184,33 +187,33 @@ if (isset($_SESSION['id'])) {
                         <input type="file" id="file" name="photo" value="upload" class="form-control" accept="image/*,.pdf">
 
                         <label for="image"> 2-Certificat médical d'aptitude du Hadj</label>
-                        <input type="file" id="file" name="image[]"  value="upload" class="form-control" accept="image/*,.pdf" multiple />
+                        <input type="file" id="file" name="image[]" value="upload" class="form-control" accept="image/*,.pdf" multiple />
 
 
                         <label for="paiement"> 3-Reçu de paiement du prix du Hadj</label>
 
-                        <input type="file" id="file" name="paiement[]"  value="upload" class="form-control" accept="image/*,.pdf" multiple />
+                        <input type="file" id="file" name="paiement[]" value="upload" class="form-control" accept="image/*,.pdf" multiple />
 
                         <label for="recu"> 4-Reçu de règlement des frais complémentaires</label>
 
 
-                        <input type="file" id="file" name="recu[]"  value="upload" class="form-control" accept="image/*,.pdf">
+                        <input type="file" id="file" name="recu[]" value="upload" class="form-control" accept="image/*,.pdf">
 
                         <label for="passeport"> 5-Passeport</label>
-                        <input type="file" id="file" name="passeport[]"  value="upload" class="form-control" accept="image/*,.pdf" multiple />
+                        <input type="file" id="file" name="passeport[]" value="upload" class="form-control" accept="image/*,.pdf" multiple />
 
                         <label for="CNI"> 6-Carte d'identité</label>
 
-                        <input type="file" id="file" name="CNI[]"  value="upload" class="form-control" accept="image/*,.pdf" multiple />
+                        <input type="file" id="file" name="CNI[]" value="upload" class="form-control" accept="image/*,.pdf" multiple />
 
                         <label for="vaccination"> 7-Photo carnet de vaccination</label>
-                        <input type="file" id="file" name="vaccination[]"  value="upload" class="form-control" accept="image/*,.pdf" multiple />
+                        <input type="file" id="file" name="vaccination[]" value="upload" class="form-control" accept="image/*,.pdf" multiple />
 
                         <label for="carnet"> 8-Photo carnet de santé</label>
-                        <input type="file" id="file" name="carnet[]"  value="upload" class="form-control" accept="image/*,.pdf" multiple />
+                        <input type="file" id="file" name="carnet[]" value="upload" class="form-control" accept="image/*,.pdf" multiple />
 
                         <label for="contrat"> 9-Photo du contrat</label>
-                        <input type="file" id="file" name="contrat[]"  value="upload" class="form-control" accept="image/*,.pdf" multiple />
+                        <input type="file" id="file" name="contrat[]" value="upload" class="form-control" accept="image/*,.pdf" multiple />
 
 
                     </div>
@@ -225,6 +228,12 @@ if (isset($_SESSION['id'])) {
 
         </div>
     </div>
+
+
+    <script>
+
+    </script>
+
     <script>
         function formusubmit() {
 

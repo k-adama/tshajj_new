@@ -87,7 +87,7 @@
                             <td><?php echo $customers['lang_parl_pel']; ?></td>
                             <td><?php echo '<center>  <img src="'.$customers['identifiant'].'" width="30px" height="30px" alt="" srcset=""></center>'  ?></td>
                             <td>
-                             <a href='../../fpdf/badge_pelerin.php?ids=<?php echo $customers['id_pel'] ?>' class = "btn btn-secondary" id="btn_detail" style=""><span class="ti-export"></span></a>
+                             <a href='../../fpdf/badge_pelerin.php?ids=<?php echo $customers['id_pel'] ?>' class = "btn btn-secondary" id="btn_detail" style=""><span class="ti-files"></span></a>
                             </td>
 
                             <td>
