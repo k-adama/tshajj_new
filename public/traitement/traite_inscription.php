@@ -304,7 +304,7 @@ $date_register = date('d-m-y h:i:s');
 $photo = $_FILES['photo'];
  $nb = count($_FILES);
 
- for($i=0; $i<$nb;$i++){
+ //for($i=0; $i<$nb;$i++){
 
    if( move_uploaded_file($_FILES["photo"]["tmp_name"], "../../photoPelerin/" . $_FILES["photo"]["name"][$i])){
       
@@ -351,7 +351,7 @@ header('location:home.php');
 }
 }
 }
-}
+//}
 ?>
 
 
