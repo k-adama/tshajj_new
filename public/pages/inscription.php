@@ -21,6 +21,71 @@ if (isset($_SESSION['id'])) {
             <div class="header">
 
             </div>
+
+
+            <style>
+                .select-block {
+                    width: 100px;
+                    margin: 50px auto 30px;
+                    position: relative;
+                }
+
+                select {
+                    width: 100%;
+                    height: 40px;
+                    font-size: 100%;
+                    font-weight: bold;
+                    cursor: pointer;
+                    border-radius: 0;
+
+                    border: none;
+                    border: 2px solid #D3D3D3;
+                    border-radius: 4px;
+                    color: white;
+                    appearance: none;
+                    padding: 8px 38px 10px 18px;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    transition: color 0.3s ease, background-color 0.3s ease, border-bottom-color 0.3s ease;
+                }
+
+                /* For IE <= 11 */
+                select::-ms-expand {
+                    display: none;
+                }
+
+                .selectIcon {
+                    top: 7px;
+                    right: 15px;
+                    width: 30px;
+                    height: 36px;
+                    padding-left: 5px;
+                    pointer-events: none;
+                    position: absolute;
+                    transition: background-color 0.3s ease, border-color 0.3s ease;
+                }
+
+                .selectIcon svg.icon {
+                    transition: fill 0.3s ease;
+                    fill: white;
+                }
+
+                select:hover,
+                select:focus {
+                    color: #000000;
+                    background-color: white;
+                }
+
+                select:hover~.selectIcon,
+                select:focus~.selectIcon {
+                    background-color: white;
+                }
+
+                select:hover~.selectIcon svg.icon,
+                select:focus~.selectIcon svg.icon {
+                    fill: #1A33FF;
+                }
+            </style>
             <form action="" method="POST" enctype="multipart/form-data">
 
 
@@ -78,7 +143,17 @@ if (isset($_SESSION['id'])) {
 
                                 <input type="number" placeholder="Nombre de participation" class="form-control" name="nbr_participation">
                                 <small style="color:red;"><?= $situa_matri_err ?></small>
-                                <input type="text" placeholder="Situation matrimoniale" class="form-control" name="situation_matri">
+
+
+                                <label for="">Situation matrimoniale</label>
+                                <select name="situation_matri">
+                                    <option value="" disabled selected>Situation</option>
+                                    <option value="">Marié(e)</option>
+                                    <option value="">Veuf(ve)</option>
+                                    <option value="">Celibataire</option>
+                                    <option value="">Divorcé(e)</option>
+
+                                </select>
                                 <input type="text" placeholder="Nom et prenoms du conjoint" class="form-control" name="nom_conjoint">
                                 <input type="number" placeholder="Contact du conjoint" class="form-control" name="conjoint_cont">
                                 <small style="color:red;"><?= $nbr_enfant_err ?></small>
@@ -136,7 +211,14 @@ if (isset($_SESSION['id'])) {
                             <input type="text" placeholder="Nom du medecin delivreur" class="form-control" name='medecin'>
                         </div>
                         <div class="form-group col-md-6">
-                            <input type="text" placeholder="Groupe sangin" class="form-control" name="grp_sangin">
+                            <label for="">Groupe sanguin</label>
+                            <select name="grp_sangin">
+                                <option value="" disabled selected>Choississez votre groupe sanguin</option>
+                                <option value="">O+</option>
+                                <option value="">O-</option>
+                                <option value="">A+</option>
+
+                            </select>
                             <input type="text" placeholder="Maladie a Signaler" class="form-control" name="mal_signale">
                             <input type="text" placeholder="Autre Information" class="form-control" name="autre_info">
 
@@ -161,7 +243,15 @@ if (isset($_SESSION['id'])) {
                             <option value="Bien">Bien</option>
                             
                         </select> -->
-                       
+                        <label for="">Tolérance à la climatisation</label>
+                        <select name="clim">
+                            <option value="" disabled selected>Tolérance</option>
+                            <option value="">Pas du tout</option>
+                            <option value="">Bien</option>
+                            <option value="">Moins bien</option>
+
+                        </select>
+
 
                         <!-- <input type="select" name="clim" class="form-control">
                    <label for="select">Tolérance à la climatisation</label>
