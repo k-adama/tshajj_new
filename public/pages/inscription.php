@@ -32,7 +32,7 @@ if (isset($_SESSION['id'])) {
 
                 select {
                     width: 100%;
-                    height: 40px;
+                    height: 35px;
                     font-size: 100%;
                     font-weight: bold;
                     cursor: pointer;
@@ -41,18 +41,10 @@ if (isset($_SESSION['id'])) {
                     border: none;
                     border: 2px solid #D3D3D3;
                     border-radius: 4px;
-                    color: white;
-                    appearance: none;
-                    padding: 8px 38px 10px 18px;
-                    -webkit-appearance: none;
-                    -moz-appearance: none;
-                    transition: color 0.3s ease, background-color 0.3s ease, border-bottom-color 0.3s ease;
+
+
                 }
 
-                /* For IE <= 11 */
-                select::-ms-expand {
-                    display: none;
-                }
 
                 .selectIcon {
                     top: 7px;
@@ -143,17 +135,17 @@ if (isset($_SESSION['id'])) {
 
                                 <input type="number" placeholder="Nombre de participation" class="form-control" name="nbr_participation">
                                 <small style="color:red;"><?= $situa_matri_err ?></small>
-
-
-                                <label for="">Situation matrimoniale</label>
-                                <select name="situation_matri">
-                                    <option value="" disabled selected>Situation</option>
-                                    <option value="">Marié(e)</option>
-                                    <option value="">Veuf(ve)</option>
-                                    <option value="">Celibataire</option>
-                                    <option value="">Divorcé(e)</option>
+                                <select name="situation_matri" id="situation_matri">
+                                    <option value="" disabled selected>Situation Matrimoniale</option>
+                                    <option value="Celibataire">Celibataire</option>
+                                    <option value="Marié">Marié(e)</option>
+                                    <option value="Veuf">Veuf(ve)</option>
+                                    <option value="Divorcé">Divorcé(e)</option>
 
                                 </select>
+
+                                <br></br>
+
                                 <input type="text" placeholder="Nom et prenoms du conjoint" class="form-control" name="nom_conjoint">
                                 <input type="number" placeholder="Contact du conjoint" class="form-control" name="conjoint_cont">
                                 <small style="color:red;"><?= $nbr_enfant_err ?></small>
@@ -210,15 +202,21 @@ if (isset($_SESSION['id'])) {
                             <input type="text" placeholder="Centre de delivrance" class="form-control" name="centre_delivr">
                             <input type="text" placeholder="Nom du medecin delivreur" class="form-control" name='medecin'>
                         </div>
-                        <div class="form-group col-md-6">
-                            <label for="">Groupe sanguin</label>
-                            <select name="grp_sangin">
-                                <option value="" disabled selected>Choississez votre groupe sanguin</option>
-                                <option value="">O+</option>
-                                <option value="">O-</option>
-                                <option value="">A+</option>
 
+                        <div class="form-group col-md-6">
+
+                            <select name="grp_sangin" id="grp_sangin">
+                                <option value="" disabled selected>Choississez votre groupe sanguin</option>
+                                <option value="O+">O+</option>
+                                <option value="O-">O-</option>
+                                <option value="A+">A+</option>
+                                <option value="A-">A-</option>
+                                <option value="B+">B+</option>
+                                <option value="B-">B-</option>
+                                <option value="AB+">AB+</option>
+                                <option value="AB-">AB-</option>
                             </select>
+
                             <input type="text" placeholder="Maladie a Signaler" class="form-control" name="mal_signale">
                             <input type="text" placeholder="Autre Information" class="form-control" name="autre_info">
 
@@ -235,32 +233,13 @@ if (isset($_SESSION['id'])) {
                         <input type="text" placeholder="Plats preferer" class="form-control" name="plat">
                         <input type="number" placeholder="nombre de plats par jour" class="form-control" name="nbr_plat">
 
-                        <!-- <label for="select">Tolérance à la climatisation</label>
-                        <select name="clim" id="select" class="select">
-
+                        <select name="clim" id="clim">
+                            <option value="" disabled selected>Tolérance à la climatisation</option>
                             <option value="Pas du tout">Pas du tout</option>
-                            <option value="Moins bien">Moins bien</option>
                             <option value="Bien">Bien</option>
-                            
-                        </select> -->
-                        <label for="">Tolérance à la climatisation</label>
-                        <select name="clim">
-                            <option value="" disabled selected>Tolérance</option>
-                            <option value="">Pas du tout</option>
-                            <option value="">Bien</option>
-                            <option value="">Moins bien</option>
+                            <option value="Moins">Moins bien</option>
 
                         </select>
-
-
-                        <!-- <input type="select" name="clim" class="form-control">
-                   <label for="select">Tolérance à la climatisation</label>
-                    <option value="Pas du tout">Pas du tout</option>
-                    <option value="Moins bien">Moins bien</option>
-                    <option value="Bien">Bien</option>
-                    </input> -->
-
-                        <!-- <input type="text" placeholder="Climatiseu" class="form-control" name="clim"> -->
 
                     </div>
                     <button class="prev" type="button">Précédent</button>

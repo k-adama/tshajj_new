@@ -204,9 +204,11 @@ if ($_POST['plat']) {
 if ($_POST['nbr_plat']) {
     $nbr_plat=secure($_POST['nbr_plat']);
 }
+
 if ($_POST['clim']) {
     $clim=secure($_POST['clim']);
 }
+
 if ($_POST['afinite_resto']) {
     $afinite_resto=secure($_POST['afinite_resto']);
 }
@@ -306,7 +308,7 @@ $photo = $_FILES['photo'];
 
  //for($i=0; $i<$nb;$i++){
 
-   if( move_uploaded_file($_FILES["photo"]["tmp_name"], "../../photoPelerin/" . $_FILES["photo"]["name"][$i])){
+   if( move_uploaded_file($_FILES["photo"]["tmp_name"], "../../photoPelerin/" . $_FILES["photo"]["name"])){
       
      file_exists("../../photoPelerin/" . $_FILES["photo"]["name"]);
  //&& file_exists("../../photoPelerin/" . $_FILES["image"]["name"])){
