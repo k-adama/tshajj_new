@@ -115,7 +115,7 @@ if (isset($_SESSION['id'])) {
 
                         <div class="form-group">
                             <small style="color:red;"><?= $langue_parler_err ?></small>
-                            <input type="text" placeholder="Langue Parlée" class="form-control" name="langue_parler">
+                            <input type="text" placeholder="Langues Parlées" class="form-control" name="langue_parler">
                             <!-- <input type="text" placeholder="Affinité" class="form-control" name="affinite_langue"> -->
                         </div>
                         <h6>Adresse géographique:</h6>
@@ -171,7 +171,7 @@ if (isset($_SESSION['id'])) {
                             <input type="text" placeholder="Nom" class="form-control" name="nom_per_urgence">
                             <small style="color:red;"><?= $prenom_per_urgence_err ?></small>
                             <input type="text" placeholder="Prenom" class="form-control" name="prenom_per_urgence">
-                            <input type="text" placeholder="Langue parlée" class="form-control" name="langue_per_urgence">
+                            <input type="text" placeholder="Langues parlées" class="form-control" name="langue_per_urgence">
                             <small style="color:red;"><?= $contact_per_urgence_err ?></small>
                             <input type="number" placeholder="Contact" class="form-control" name="contact_per_urgence">
                         </div>
@@ -201,7 +201,11 @@ if (isset($_SESSION['id'])) {
                             <input type="text" placeholder="Certificat d'aptitude medicale " class="form-control" name="certificat_AM_numero">
                             <input type="text" placeholder="Centre de delivrance" class="form-control" name="centre_delivr">
                             <input type="text" placeholder="Nom du medecin delivreur" class="form-control" name='medecin'>
+                            <input type="text" placeholder="Traitements suivis" class="form-control" name='traitement_suivi'>
+
+
                         </div>
+
 
                         <div class="form-group col-md-6">
 
@@ -219,6 +223,10 @@ if (isset($_SESSION['id'])) {
 
                             <input type="text" placeholder="Maladie a Signaler" class="form-control" name="mal_signale">
                             <input type="text" placeholder="Autre Information" class="form-control" name="autre_info">
+                            <label for="">Cas de vulnérabilité</label><br>
+                            <INPUT type="radio" name="choix" VALUE="choix"> OUI <BR>
+                            <INPUT type="radio" name="choix" VALUE="choix">NON
+
 
                         </div>
                     </div>
