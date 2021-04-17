@@ -224,8 +224,8 @@ if (isset($_SESSION['id'])) {
                             <input type="text" placeholder="Maladie a Signaler" class="form-control" name="mal_signale">
                             <input type="text" placeholder="Autre Information" class="form-control" name="autre_info">
                             <label for="">Cas de vulnérabilité</label><br>
-                            <INPUT type="radio" name="choix" VALUE="choix"> OUI <BR>
-                            <INPUT type="radio" name="choix" VALUE="choix">NON
+                            <INPUT type="radio" name="cas_vulnerabilite" VALUE="cas_vulnerabilite"> OUI <BR>
+                            <INPUT type="radio" name="cas_vulnerabilite" VALUE="cas_vulnerabilite">NON
 
 
                         </div>

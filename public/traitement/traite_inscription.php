@@ -6,7 +6,7 @@
 
 $nom=$prenom=$date_naissance=$passport=$profession=$niveau_etude=$contact=$email=$langue_parle=$affinite_langue=$ville=$commune=$quatier=$rue_geo=$porte_geo=$nbr_participation=
 $situation_matri=$nom_conjoint=$contact_conjoint=$nbr_enfant=$origine=$nom_per_urgence=$prenom_per_urgence=$langue_per_urgence=$contact_per_urgence=$ville_urgence=$commune_urgence=
-$quartier_urgence=$rue_urgence=$porte_urgence=$certificat_AM_numero=$centre_delivr=$traitement_suivi=$grp_sangin=$mal_signale=$autre_info=$choix=$alergie=$plat=$nbr_plat=$clim=$afinite_resto=$medecin=$photo=$image=$paiement=$recu=$passeport=$CNI=$vaccination=$carnet=$contrat="";
+$quartier_urgence=$rue_urgence=$porte_urgence=$certificat_AM_numero=$centre_delivr=$traitement_suivi=$grp_sangin=$mal_signale=$autre_info=$cas_vulnerabilite=$alergie=$plat=$nbr_plat=$clim=$afinite_resto=$medecin=$photo=$image=$paiement=$recu=$passeport=$CNI=$vaccination=$carnet=$contrat="";
 
 $nom_err=$prenom_err=$date_err=$passposrt_err= $profession_err=$niveau_err=$contact_err=$email_err=$langue_parler_err=$ville_err=$quatier_err=$situa_matri_err=$nbr_enfant_err=$origine_err=
 $nom_per_urgence_err= $prenom_per_urgence_err=$contact_per_urgence_err=$ville_urgence_err=$quartier_urgence_err= $certificat_AM_numero_err= $centre_delivr_err=$traitement_suivi_err=$grp_sangin_err="";
@@ -182,8 +182,6 @@ if(empty($_POST['traitement_suivi'])){
     $traitement_suivi=secure($_POST['traitement_suivi']);
 }
 
-
-
 if(empty($_POST['grp_sangin'])){
     $grp_sangin_err = "Ce champs est obligatoire";
 }else{
@@ -199,8 +197,8 @@ if ($_POST['autre_info']) {
     $autre_info=secure($_POST['autre_info']);
 }
 
-if ($_POST['choix']) {
-    $choix=secure($_POST['choix']);
+if ($_POST['cas_vulnerabilite']) {
+    $choix=secure($_POST['cas_vulnerabilite']);
 }
 
 
@@ -355,18 +353,14 @@ $req=$db->prepare("INSERT INTO tshajj_pelerin(identifiant,nom_pel,prenom_pel,dat
 cont_pel,email_pel,lang_parl_pel,ville_pel,comm_pel,quart_pel,rue_pel,port_pel,nb_part_pel,
 sit_matri_pel,nom_conj_pel,cont_conj_pel,nb_enf_pel,orig_pel,nom_urg_pel,prenom_urg_pel,cont_urg_pel,lang_parl_urg_pel,
 ville_urg_pel,comm_urg_pel,quart_urg_pel,rue_urg_pel,porte_urg_pel,cert_apt_medi_pel,centre_deli_pel,med_del_pel,traitement_suivi,gp_sang_pel,
-mal_sign_pel,autr_info_pel,choix,all_pel,plats_pref_pel,nb_plats_jr_pel,clim_pel,affi1_pel,photo_pel,photo_cert_apt,photo_recu_paie,photo_recu_regl,photo_passport,photo_cni,photo_carn_vacc,photo_carn_sant,photo_contrat,date_register)
+mal_sign_pel,autr_info_pel,cas_vulnerabilite,all_pel,plats_pref_pel,nb_plats_jr_pel,clim_pel,affi1_pel,photo_pel,photo_cert_apt,photo_recu_paie,photo_recu_regl,photo_passport,photo_cni,photo_carn_vacc,photo_carn_sant,photo_contrat,date_register)
 
 VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
 $req->execute(array($codebare,$nom,$prenom,$date_naissance,$passport,$profession,$niveau_etude,$contact,$email,$langue_parle,$ville,$commune,$quartier,$rue_geo,$porte_geo,
 $nbr_participation,$situation_matri,$nom_conjoint,$contact_conjoint,$nbr_enfant,$origine,$nom_per_urgence,$prenom_per_urgence,$contact_per_urgence,$langue_per_urgence,$ville_urgence,$commune_urgence,$quartier_urgence,$rue_urgence,$porte_urgence,$certificat_AM_numero,
-$centre_delivr,$medecin,$traitement_suivi,$grp_sangin,$mal_signale,$autre_info,$choix,$alergie,$plat,$nbr_plat,$clim,$afinite_resto,$photo,$image,$paiement,$recu,$passeport,$CNI,$vaccination,$carnet,$contrat,$date_register) ) ;
+$centre_delivr,$medecin,$traitement_suivi,$grp_sangin,$mal_signale,$autre_info,$cas_vulnerabilite,$alergie,$plat,$nbr_plat,$clim,$afinite_resto,$photo,$image,$paiement,$recu,$passeport,$CNI,$vaccination,$carnet,$contrat,$date_register) ) ;
 header('location:home.php');
 }
 }
 }
 //}
-?>
-
-
-
